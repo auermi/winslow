@@ -25,8 +25,22 @@
 </head>
 <body class="{{body_class}} nav-closed">
 
-    {{!-- The blog navigation links --}}
-    {{navigation}}
+    {{!-- Navigation --}}
+    <nav class="nav">
+        <div class="site-title">
+          {{#if @blog.title}}
+              <a href="/">{{ @blog.title }}</a>
+          {{/if}}
+        </div>
+        <div class="site-description">
+          {{#if @blog.description}}
+              <p href="/">{{ @blog.description }}</p>
+          {{/if}}
+        </div>
+        {{#if @blog.navigation}}
+          {{navigation}}
+        {{/if}}
+    </nav>
 
     <div class="site-wrapper">
 
