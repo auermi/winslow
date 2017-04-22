@@ -1,0 +1,2 @@
+# winslow
+a ghost theme
