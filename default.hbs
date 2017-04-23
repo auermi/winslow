@@ -28,16 +28,16 @@
 
     {{!-- Navigation --}}
     <nav class="nav">
-        <div class="site-title">
+        <div class="page-title">
           {{#if @blog.title}}
               <a href="/">{{ @blog.title }}</a>
           {{/if}}
         </div>
-        <div class="site-description">
+        <p class="site-description">
           {{#if @blog.description}}
               <p href="/">{{ @blog.description }}</p>
           {{/if}}
-        </div>
+        </p>
         {{#if @blog.navigation}}
           {{navigation}}
         {{/if}}

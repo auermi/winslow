@@ -1,16 +1,18 @@
 {{!-- This is the post loop - each post will be output using this markup --}}
 {{#foreach posts}}
   {{#has tag="macro"}}
-    <h2>{{title}}</h2>
-    <time class="post-date" datetime="{{date format="YYYY"}}">
-      {{date format="YYYY"}}{{#has tag="present"}}&nbsp;-&nbsp;Present{{/has}}
-    </time>
+    <h1>{{title}}</h2>
+    <h2>
+      <time class="post-date" datetime="{{date format="YYYY"}}">
+        {{date format="YYYY"}}{{#has tag="present"}}&nbsp;-&nbsp;Present{{/has}}
+      </time>
+    </h2>
     <p>{{ content }}</p>
     {{#get "posts" include="tags" filter="tags:[  {{title}}]"}}
       <h3>Projects</h3>
       {{#foreach posts}}
         <a class="project" href="{{url}}">
-          <h4>{{title}}</h4>
+          <p>{{title}}</p>
           <div class="project-tags">
             {{tags}}
           </div>

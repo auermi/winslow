@@ -10,7 +10,7 @@
     <article class="{{post_class}}">
         <img src="{{image}}" alt="">
         <header class="post-header">
-            <h1 class="post-title">{{title}}</h1>
+            <div class="page-title">{{title}}</div>
             <section class="post-meta">
                 <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
             </section>
@@ -21,22 +21,6 @@
         </section>
 
         <footer class="post-footer">
-
-            <section class="share">
-                <h4>Share this post</h4>
-                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
-                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                    <span class="hidden">Twitter</span>
-                </a>
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                    <span class="hidden">Facebook</span>
-                </a>
-                <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
-                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                    <span class="hidden">Google+</span>
-                </a>
-            </section>
 
         </footer>
 
