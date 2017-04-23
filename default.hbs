@@ -27,20 +27,16 @@
 <body class="{{body_class}} nav-closed">
 
     {{!-- Navigation --}}
-    <nav class="nav">
-        <div class="page-title">
-          {{#if @blog.title}}
-              <a href="/">{{ @blog.title }}</a>
-          {{/if}}
-        </div>
-        <p class="site-description">
-          {{#if @blog.description}}
-              <p href="/">{{ @blog.description }}</p>
-          {{/if}}
-        </p>
-        {{#if @blog.navigation}}
-          {{navigation}}
-        {{/if}}
+    <nav>
+      {{#if @blog.title}}
+        <a href="/" class="no-underline">
+          <div class="headline color-green">{{ @blog.title }}</div>
+        </a>
+      {{/if}}
+      {{#if @blog.description}}
+        <p class="color-grey-md">{{ @blog.description }}</p>
+      {{/if}}
+      {{navigation}}
     </nav>
 
     <div class="site-wrapper">
