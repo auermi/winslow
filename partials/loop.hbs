@@ -9,12 +9,12 @@
     {{#get "posts" include="tags" filter="tags:[  {{title}}]"}}
       <h3>Projects</h3>
       {{#foreach posts}}
-        <div class="project">
+        <a class="project" href="{{url}}">
           <h4>{{title}}</h4>
           <div class="project-tags">
             {{tags}}
           </div>
-        </div>
+        </a>
       {{/foreach}}
     {{/get}}
   {{/has}}
