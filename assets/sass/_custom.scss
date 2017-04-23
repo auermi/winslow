@@ -1,3 +1,25 @@
+body {
+  margin: 0;
+}
+
 .nav-current a {
   color: $black;
+}
+
+nav {
+  width: 256px;
+  .list {
+    margin-top: 66px;
+    li {
+      // margin-bottom: 4px;
+    }
+  }
+}
+
+.content {
+  max-width: 720px;
+}
+
+header {
+  height: 196px;
 }

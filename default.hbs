@@ -24,8 +24,8 @@
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}} nav-closed">
-
+<body>
+  <div class="container">
     {{!-- Navigation --}}
     <nav>
       {{#if @blog.title}}
@@ -34,12 +34,12 @@
         </a>
       {{/if}}
       {{#if @blog.description}}
-        <p class="color-grey-md">{{ @blog.description }}</p>
+        <p class="color-grey-md subheadline">{{ @blog.description }}</p>
       {{/if}}
       {{navigation}}
     </nav>
 
-    <div class="site-wrapper">
+    <div class="content">
 
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         {{{body}}}
@@ -54,6 +54,6 @@
 
     {{!-- Ghost outputs important scripts and data with this tag --}}
     {{ghost_foot}}
-
+  </div>
 </body>
 </html>

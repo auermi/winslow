@@ -36,13 +36,17 @@ h3 {
   text-transform: uppercase;
 }
 
-p {
+p, li {
   color: $grey-dk;
   font-size: 1.125rem;
+  line-height: 2.25rem;
 }
 
 .headline {
   font-size: 1.75rem;
+}
+.subheadline {
+  line-height: 1.75rem;
 }
 
 a {
