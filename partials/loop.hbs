@@ -1,23 +1,33 @@
 {{!-- This is the post loop - each post will be output using this markup --}}
 {{#foreach posts}}
   {{#has tag="macro"}}
-    <h1>{{title}}</h2>
-    <h2>
-      <time class="post-date" datetime="{{date format="YYYY"}}">
-        {{date format="YYYY"}}{{#has tag="present"}}&nbsp;-&nbsp;Present{{/has}}
-      </time>
-    </h2>
-    <p>{{ content }}</p>
-    {{#get "posts" include="tags" filter="tags:[  {{title}}]"}}
-      <h3>Projects</h3>
-      {{#foreach posts}}
-        <a class="project" href="{{url}}">
-          <p>{{title}}</p>
-          <div class="project-tags">
-            {{tags}}
-          </div>
-        </a>
-      {{/foreach}}
-    {{/get}}
+    <div class="macro-post">
+      <div class="post-header">
+        <h1>{{title}}</h2>
+        <h2>
+          <time class="post-date" datetime="{{date format="YYYY"}}">
+            {{date format="YYYY"}}{{#has tag="present"}}&nbsp;-&nbsp;Present{{/has}}
+          </time>
+        </h2>
+      </div>
+      <p>{{ content }}</p>
+      {{#get "posts" include="tags" filter="tags:[  {{title}}]"}}
+        <h3>Projects</h3>
+        {{#foreach posts}}
+          <a class="project no-underline block br flex align-items-center" href="{{url}}">
+            <p class="color-black lh-solid m0">{{title}}</p>
+            {{#if tags}}
+              <div class="project-tags">
+                <ul class="list">
+                  {{#foreach tags}}
+                    <li title="{{name}}" class="tag bgcolor-green color-white f7 inline-block br">{{name}}</li>
+                  {{/foreach}}
+                </ul>
+              </div>
+            {{/if}}
+          </a>
+        {{/foreach}}
+      {{/get}}
+    </div>
   {{/has}}
 {{/foreach}}

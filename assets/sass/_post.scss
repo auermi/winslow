@@ -1,0 +1,17 @@
+.post-header {
+  margin-bottom: 32px;
+}
+
+.project {
+  border: 1px $grey-lt solid;
+  padding: 0 24px;
+  height: 64px;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+.macro-post {
+  margin-bottom: 96px;
+}

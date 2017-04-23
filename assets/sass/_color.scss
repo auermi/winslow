@@ -3,6 +3,7 @@ $black: #000000;
 $grey-lt: #DCDCDC;
 $grey-md: #A7A7A7;
 $grey-dk: #4B4B4B;
+$white: #FFFFFF;
 
 $colors: (
   green: $green,
@@ -10,11 +11,5 @@ $colors: (
   grey-lt: $grey-lt,
   grey-md: $grey-md,
   grey-dk: $grey-dk,
+  white: $white
 );
-
-
-@each $key, $color in $colors {
-  .color-#{$key} {
-    color: $color;
-  }
-}

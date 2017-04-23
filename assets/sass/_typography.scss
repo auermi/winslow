@@ -10,6 +10,12 @@ $serif: georgia,
         times,
         serif;
 
+@each $key, $color in $colors {
+  .color-#{$key} {
+    color: $color;
+  }
+}
+
 h1, h2, h3, p, a, div {
   font-family: $sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -34,6 +40,7 @@ h3 {
   color: $grey-md;
   letter-spacing: 2px;
   text-transform: uppercase;
+  margin: 32px 0 24px;
 }
 
 p, li {
@@ -59,3 +66,7 @@ a {
   list-style-type: none;
   padding-left: 0;
 }
+
+.f7 { font-size: .75rem; }
+
+.lh-solid { line-height: 1; }
