@@ -1,0 +1,20 @@
+$green: #589B64;
+$black: #000000;
+$grey-lt: #DCDCDC;
+$grey-md: #A7A7A7;
+$grey-dk: #4B4B4B;
+
+$colors: (
+  green: $green,
+  black: $black,
+  grey-lt: $grey-lt,
+  grey-md: $grey-md,
+  grey-dk: $grey-dk,
+);
+
+
+@each $key, $color in $colors {
+  .color-#{$key} {
+    color: $color;
+  }
+}

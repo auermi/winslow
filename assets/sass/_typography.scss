@@ -5,7 +5,11 @@ $sans-serif: -apple-system, BlinkMacSystemFont,
              roboto, noto,
              'segoe ui', arial,
              sans-serif;
-             
+
 $serif: georgia,
         times,
         serif;
+
+h1, h2, h3, p, a {
+  font-family: $sans-serif;
+}
