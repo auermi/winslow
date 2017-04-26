@@ -3,11 +3,11 @@
   {{#has tag="macro"}}
     <div class="macro-post">
       <div class="post-header">
-        <h1>{{title}}</h2>
+        <h1>{{title}}</h1>
         <p>{{ content }}</p>
       </div>
       {{#get "posts" include="tags" filter="tags:[  {{title}}]"}}
-        <h3>Associated Projects</h3>
+        <h2>Associated Projects</h2>
         {{#foreach posts}}
           <div class="project br flex align-items-center">
             <div>

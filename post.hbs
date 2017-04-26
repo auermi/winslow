@@ -7,18 +7,13 @@
 {{#post}}
 
   <main role="main">
-    <header>
-      {{#has tag="#work"}}
-        <div class="headline">{{title}}</div>
-        <h2>
-          <time class="post-date" datetime="{{date format="YYYY"}}">
-            {{date format="YYYY"}}{{#has tag="present"}}&nbsp;-&nbsp;Present{{/has}}
-          </time>
-        </h2>
+    <div class="post-header">
+      <div class="flex align-items-center">
+        <h1 class="mr-1">{{title}}</h1>
         {{> "tags"}}
-        <a href="/">Back To Work</a>
-      {{/has}}
-    </header>
+      </div>
+      <p><time class="color-grey-dk" datetime="{{date format="YYYY"}}">{{date format="YYYY"}}</time></p>
+    </div>
     <article>
 
       <section class="post-content">
@@ -26,7 +21,7 @@
       </section>
 
       <footer class="post-footer">
-
+        <a href="/">Back To Work</a>
       </footer>
 
     </article>
