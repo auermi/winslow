@@ -6,25 +6,30 @@
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
 
-<main role="main">
-    <article class="{{post_class}}">
-        <img src="{{image}}" alt="">
-        <header class="post-header">
-            <div class="page-title">{{title}}</div>
-            <section class="post-meta">
-                <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
-            </section>
-        </header>
+  <main role="main">
+    <header>
+      {{#has tag="#work"}}
+        <div class="headline">{{title}}</div>
+        <h2>
+          <time class="post-date" datetime="{{date format="YYYY"}}">
+            {{date format="YYYY"}}{{#has tag="present"}}&nbsp;-&nbsp;Present{{/has}}
+          </time>
+        </h2>
+        {{> "tags"}}
+        <a href="/">Back To Work</a>
+      {{/has}}
+    </header>
+    <article>
 
-        <section class="post-content">
-            {{content}}
-        </section>
+      <section class="post-content">
+        {{content}}
+      </section>
 
-        <footer class="post-footer">
+      <footer class="post-footer">
 
-        </footer>
+      </footer>
 
     </article>
-</main>
+  </main>
 
 {{/post}}

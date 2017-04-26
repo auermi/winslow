@@ -1,5 +1,5 @@
 .post-header {
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
 .project {
@@ -10,8 +10,14 @@
   justify-content: space-between;
   box-sizing: border-box;
   margin-bottom: 16px;
+  a {
+    transition: .4s all;
+  }
+  a:hover {
+    color: $black;
+  }
 }
 
 .macro-post {
-  margin-bottom: 96px;
+  margin-bottom: 104px;
 }
