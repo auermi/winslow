@@ -1,0 +1,9 @@
+{{#if tags}}
+  <div class="project-tags">
+    <ul class="list">
+      {{#foreach tags}}
+        <li title="{{name}}" class="tag bgcolor-green color-white f7 inline-block br">{{name}}</li>
+      {{/foreach}}
+    </ul>
+  </div>
+{{/if}}

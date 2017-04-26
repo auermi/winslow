@@ -12,9 +12,9 @@
   margin-bottom: 16px;
   a {
     transition: .4s all;
-  }
-  a:hover {
-    color: $black;
+    &:hover {
+      color: $black;
+    }
   }
 }
 
