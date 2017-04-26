@@ -1,59 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-    {{!-- Document Settings --}}
+
+  <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    {{!-- Page Meta --}}
     <title>{{meta_title}}</title>
     <meta name="description" content="{{meta_description}}" />
-
-    {{!-- Mobile Meta --}}
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    {{!-- Brand icon --}}
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
-
-    {{!-- Styles --}}
     <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
-
-
-    {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}
-</head>
+  </head>
 
-<body>
-  <div class="container">
-    {{!-- Navigation --}}
-    <nav>
-      {{#if @blog.title}}
-        <a href="/" class="no-underline">
-          <div class="headline color-green">{{ @blog.title }}</div>
-        </a>
-      {{/if}}
-      {{#if @blog.description}}
-        <p class="color-grey-md subheadline">{{ @blog.description }}</p>
-      {{/if}}
-      {{navigation}}
-    </nav>
+  <body>
+    <div class="container">
 
-    <div class="content">
+      <nav>
+        {{#if @blog.title}}
+          <a href="/" class="no-underline">
+            <div class="headline color-green">{{ @blog.title }}</div>
+          </a>
+        {{/if}}
+        {{#if @blog.description}}
+          <p class="color-grey-md subheadline">{{ @blog.description }}</p>
+        {{/if}}
+        {{navigation}}
+      </nav>
 
-        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+      <div class="content">
         {{{body}}}
 
-        {{!-- The tiny footer at the very bottom --}}
-        <footer class="site-footer clearfix">
-            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
-        </footer>
+        <footer>Proudly published with <a href="https://ghost.org">Ghost</a></footer>
 
+      </div>
+      {{ghost_foot}}
     </div>
-
-    {{!-- Ghost outputs important scripts and data with this tag --}}
-    {{ghost_foot}}
-  </div>
-</body>
+  </body>
 </html>
