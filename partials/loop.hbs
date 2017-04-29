@@ -6,20 +6,7 @@
         <h1>{{title}}</h1>
         <p>{{ content }}</p>
       </div>
-      {{#get "posts" include="tags" filter="tags:[  {{title}}]"}}
-        <h2>Associated Projects</h2>
-        <div class="projects">
-          {{#foreach posts}}
-            <div class="project br flex align-items-center">
-              <div>
-                <time class="color-grey-lt mr-1" datetime="{{date format="YYYY"}}">{{date format="YYYY"}}</time>
-                <a class="lh-solid m0 inline-block no-underline color-grey-md" href="{{url}}">{{title}}</a>
-              </div>
-              {{> "tags"}}
-            </div>
-          {{/foreach}}
-        </div>
-      {{/get}}
+      {{> "loop-projects"}}
     </div>
   {{/has}}
 {{/foreach}}

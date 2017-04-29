@@ -1,0 +1,24 @@
+{{!< default}}
+
+{{#post}}
+
+  <main role="main">
+
+    <div class="post-header">
+      <h1>{{title}}</h1>
+      {{content}}
+    </div>
+
+    <article>
+
+      <section class="post-content">
+        {{> "loop-projects"}}
+      </section>
+
+      {{> "post-footer"}}
+
+    </article>
+
+  </main>
+
+{{/post}}
