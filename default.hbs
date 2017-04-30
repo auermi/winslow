@@ -19,7 +19,7 @@
       <nav>
         {{#if @blog.title}}
           <a href="/" class="no-underline">
-            <h2 class="color-green">{{ @blog.title }}</h2>
+            <h2 class="color-green animation-hover">{{ @blog.title }}</h2>
           </a>
         {{/if}}
         {{#if @blog.description}}
@@ -29,10 +29,10 @@
       </nav>
 
       <div class="content">
-        
+
         {{{body}}}
 
-        <footer class="color-grey-dk">Proudly published with <a href="https://ghost.org">Ghost</a></footer>
+        <footer class="color-grey-dk">Proudly published with <a class="animation-hover" href="https://ghost.org" target="_blank">Ghost</a></footer>
 
       </div>
 

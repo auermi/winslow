@@ -35,6 +35,12 @@
 }
 
 .post-content {
+  a {
+    transition: .3s opacity ease;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
   img {
     max-width: 100%;
   }
