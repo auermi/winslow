@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>{{meta_title}}</title>
+    <title id="link">{{meta_title}} - {{#if @blog.title}}{{ @blog.title }}{{/if}}</title>
     <meta name="description" content="{{meta_description}}" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,12 +29,20 @@
       </nav>
 
       <div class="content">
+        
         {{{body}}}
 
         <footer class="color-grey-dk">Proudly published with <a href="https://ghost.org">Ghost</a></footer>
 
       </div>
+
       {{ghost_foot}}
+
+      <script type="text/javascript">
+        // Format Page Title
+        document.title = `${'{{meta_title}}'.charAt(0).toUpperCase()}${'{{meta_title}}'.slice(1)} - {{@blog.title}}`;
+      </script>
+
     </div>
   </body>
 </html>
