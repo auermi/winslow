@@ -16,7 +16,7 @@
   <body>
     <div class="container">
 
-      <nav>
+      <nav class="flex flex-direction-column">
         {{#if @blog.title}}
           <a href="/" class="no-underline">
             <h2 class="color-green animation-hover">{{ @blog.title }}</h2>
@@ -25,6 +25,10 @@
         {{#if @blog.description}}
           <p class="color-grey-md subheadline">{{ @blog.description }}</p>
         {{/if}}
+        <menu id="menu" class="br">
+          <div>Menu</div>
+          <div class="ml-1 menu-icon">-</div>
+        </menu>
         {{navigation}}
       </nav>
 
@@ -41,6 +45,11 @@
       <script type="text/javascript">
         // Format Page Title
         document.title = `${'{{meta_title}}'.charAt(0).toUpperCase()}${'{{meta_title}}'.slice(1)} - {{@blog.title}}`;
+
+        var menu = document.getElementById('menu');
+        menu.addEventListener('click', function() {
+          menu.classList.toggle('active');
+        });
       </script>
 
     </div>

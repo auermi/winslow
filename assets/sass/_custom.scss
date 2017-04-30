@@ -11,8 +11,48 @@ body {
 
 nav {
   width: 224px;
+  @include bp(800) {
+    width: 100%;
+    flex-direction: row !important;
+    justify-content: space-between;
+    p {
+      display: none;
+    }
+    .list {
+      visibility: hidden;
+      position: absolute;
+      transform: translateX(-100%);
+      padding: 16px 0;
+      li {
+        padding: 8px 24px;
+      }
+    }
+  }
   .list {
     margin-top: 66px;
+  }
+}
+
+#menu {
+  display: none;
+  border: 1px solid $black;
+  padding: 6px 16px;
+  .menu-icon {
+    margin-left: 8px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  @include bp(800) {
+    display: flex;
+  }
+  &.active {
+    border-color: $green;
+    color: $green;
+    &+.list {
+      visibility: visible;
+      background-color: $grey-lt;
+    }
   }
 }
 
