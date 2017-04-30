@@ -6,12 +6,15 @@
 
     <div class="post-header">
       <h1>{{title}}</h1>
+      {{#if image}}
+        <img src="{{image}}" alt="{{title}} page header image">
+      {{/if}}
     </div>
-
     <article>
-      
+
       <section class="post-content">
         {{content}}
+        {{> "loop-projects"}}
       </section>
 
       {{> "post-footer"}}
