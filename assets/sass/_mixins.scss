@@ -1,0 +1,19 @@
+@mixin bp($point) {
+  @if $point == 800 {
+    @media (max-width: 800px) {
+      @content;
+    }
+  }
+  @else if $point == 520 {
+    @media (max-width: 520px) {
+      @content;
+    }
+  }
+}
+
+@mixin selection-color($color) {
+  -webkit-user-select: $color;
+  -moz-user-select: $color;
+  -ms-user-select: $color;
+  user-select: $color;
+}

@@ -11,6 +11,9 @@ body {
 
 nav {
   width: 224px;
+  .list {
+    margin-top: 66px;
+  }
   @include bp(800) {
     width: 100%;
     flex-direction: row !important;
@@ -18,25 +21,45 @@ nav {
     p {
       display: none;
     }
+    .list, .nav-wrap {
+      transition: .3s all ease;
+    }
     .list {
       visibility: hidden;
+      position: relative;
+      padding: 84px 0;
       position: absolute;
-      transform: translateX(-100%);
-      padding: 16px 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      visibility: hidden;
+      background-color: rgba($white, 0.95);
+      opacity: 0;
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      flex-direction: column;
       li {
         padding: 8px 24px;
+        opacity: 0;
+        font-size: 24px;
+        text-align: center;
+        transition: .6s all ease;
       }
     }
-  }
-  .list {
-    margin-top: 66px;
   }
 }
 
 #menu {
   display: none;
-  border: 1px solid $black;
   padding: 6px 16px;
+  transition: .3s all ease;
+  z-index: 2;
+  position: relative;
+  div {
+    @include selection-color(none);
+  }
   .menu-icon {
     margin-left: 8px;
   }
@@ -47,11 +70,15 @@ nav {
     display: flex;
   }
   &.active {
-    border-color: $green;
-    color: $green;
+    color: $grey-md;
     &+.list {
+      justify-content: space-between;
+      opacity: 1;
       visibility: visible;
-      background-color: $grey-lt;
+      padding: 184px 0;
+      li {
+        opacity: 1;
+      }
     }
   }
 }
