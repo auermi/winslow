@@ -1,13 +1,9 @@
+$bp-l: 900;
+$bp-s: 520;
+
 @mixin bp($point) {
-  @if $point == 800 {
-    @media (max-width: 800px) {
-      @content;
-    }
-  }
-  @else if $point == 520 {
-    @media (max-width: 520px) {
-      @content;
-    }
+  @media (max-width: $point + 'px') {
+    @content;
   }
 }
 
