@@ -35,9 +35,12 @@
       }
       .truncate {
         white-space: normal;
-        width: 100%;
+        max-width: none;
         line-height: 24px;
       }
+    }
+    &-tags {
+      display: none;
     }
     &-tags .list {
       margin-bottom: 0;
