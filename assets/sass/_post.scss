@@ -24,14 +24,12 @@
   }
   @include bp($bp-s) {
     height: auto;
-    flex-direction: column;
-    align-items: flex-start;
     padding: 1rem;
     &-header {
       display: flex;
       flex-direction: column;
       time {
-        margin-bottom: 0.5rem;
+        display: none;
       }
       .truncate {
         white-space: normal;
@@ -40,11 +38,8 @@
         padding-bottom: 0;
       }
     }
-    &-tags {
-      display: none;
-    }
     &-tags .list {
-      margin-bottom: 0;
+      margin: 0;
     }
   }
 }
