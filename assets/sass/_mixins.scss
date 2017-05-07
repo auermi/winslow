@@ -1,5 +1,6 @@
 $bp-l: 900;
 $bp-s: 520;
+$bl-vs: 420;
 
 @mixin bp($point) {
   @media (max-width: $point + 'px') {

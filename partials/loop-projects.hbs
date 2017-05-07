@@ -2,9 +2,9 @@
   <div class="projects">
     {{#foreach posts}}
       <div class="project br flex align-items-center">
-        <div>
+        <div class="project-header">
           <time class="color-grey-lt mr-1" datetime="{{date format="YYYY"}}">{{date format="YYYY"}}</time>
-          <a class="lh-solid m0 inline-block no-underline color-grey-md" href="{{url}}">{{title}}</a>
+          <a class="lh-solid m0 inline-block no-underline color-grey-md truncate" href="{{url}}">{{title}}</a>
         </div>
         {{> "tags"}}
       </div>
