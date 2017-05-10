@@ -9,7 +9,6 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
-    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
     {{ghost_head}}
   </head>
 
@@ -47,15 +46,23 @@
       {{ghost_foot}}
 
     </div>
+    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
     <script type="text/javascript">
-      // Format Page Title
-      document.title = `${'{{meta_title}}'.charAt(0).toUpperCase()}${'{{meta_title}}'.slice(1)} - {{@blog.title}}`;
 
+      // Format Page Title
+      if (window.location.pathname === '/') {
+        document.title = '{{ @blog.title }}';
+      } else {
+        document.title = `${'{{meta_title}}'.charAt(0).toUpperCase()}${'{{meta_title}}'.slice(1)} - {{@blog.title}}`;
+      }
+
+      // Initialize mobile menu
       var menu = document.getElementById('menu');
       menu.addEventListener('click', function() {
         menu.classList.toggle('active');
         document.body.classList.toggle('overflow-hidden');
       });
+
     </script>
   </body>
 </html>
