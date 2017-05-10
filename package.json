@@ -22,5 +22,9 @@
     "gulp-csso": "^3.0.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0"
+  },
+  "devDependencies": {
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.1.2"
   }
 }

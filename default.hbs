@@ -47,22 +47,6 @@
 
     </div>
     <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
-    <script type="text/javascript">
-
-      // Format Page Title
-      if (window.location.pathname === '/') {
-        document.title = '{{ @blog.title }}';
-      } else {
-        document.title = `${'{{meta_title}}'.charAt(0).toUpperCase()}${'{{meta_title}}'.slice(1)} - {{@blog.title}}`;
-      }
-
-      // Initialize mobile menu
-      var menu = document.getElementById('menu');
-      menu.addEventListener('click', function() {
-        menu.classList.toggle('active');
-        document.body.classList.toggle('overflow-hidden');
-      });
-
-    </script>
+    <script type="text/javascript"></script>
   </body>
 </html>
