@@ -46,17 +46,16 @@
 
       {{ghost_foot}}
 
-      <script type="text/javascript">
-        // Format Page Title
-        document.title = `${'{{meta_title}}'.charAt(0).toUpperCase()}${'{{meta_title}}'.slice(1)} - {{@blog.title}}`;
-
-        var menu = document.getElementById('menu');
-        menu.addEventListener('click', function() {
-          menu.classList.toggle('active');
-          document.body.classList.toggle('overflow-hidden');
-        });
-      </script>
-
     </div>
+    <script type="text/javascript">
+      // Format Page Title
+      document.title = `${'{{meta_title}}'.charAt(0).toUpperCase()}${'{{meta_title}}'.slice(1)} - {{@blog.title}}`;
+
+      var menu = document.getElementById('menu');
+      menu.addEventListener('click', function() {
+        menu.classList.toggle('active');
+        document.body.classList.toggle('overflow-hidden');
+      });
+    </script>
   </body>
 </html>
