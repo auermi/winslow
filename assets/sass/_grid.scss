@@ -1,10 +1,10 @@
 .container {
   max-width: 1040px;
-  margin: 40px auto 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 40px 40px;
+  padding: 40px;
   @include bp($bp-l) {
     flex-direction: column;
   }
