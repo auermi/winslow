@@ -10,7 +10,8 @@ body {
 }
 
 nav {
-  width: 224px;
+  flex: 1;
+  margin-right: 2rem;
   .list {
     margin-top: 66px;
   }
@@ -120,7 +121,7 @@ nav {
 }
 
 .content {
-  max-width: 720px;
+  flex: 3;
 }
 
 .tag {
