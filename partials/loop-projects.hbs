@@ -1,10 +1,10 @@
 {{#get "posts" include="tags" filter="tags:[{{title}}]"}}
   <div class="projects">
     {{#foreach posts}}
-      <div class="project br flex align-items-center">
-        <div class="project-header">
+      <div class="project br flex align-items-center space-between">
+        <div class="project-header flex mr-2 overflow-hidden">
           <time class="color-grey-lt mr-1" datetime="{{date format="YYYY"}}">{{date format="YYYY"}}</time>
-          <a class="lh-solid m0 inline-block no-underline color-grey-md truncate" href="{{url}}">{{title}}</a>
+          <a class="no-underline color-grey-md overflow-hidden white-space-nowrap text-overflow-ellipsis" href="{{url}}">{{title}}</a>
         </div>
         {{> "tags"}}
       </div>

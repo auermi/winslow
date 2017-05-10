@@ -9,11 +9,9 @@
 }
 
 .project {
+  height: 64px;
   border: 1px $grey-lt solid;
   padding: 0 24px;
-  height: 64px;
-  flex-direction: row;
-  justify-content: space-between;
   margin-bottom: 16px;
   a {
     transition: .4s all;
@@ -25,20 +23,10 @@
     height: auto;
     padding: 1rem;
     &-header {
-      display: flex;
       flex-direction: column;
       time {
         display: none;
       }
-      .truncate {
-        white-space: normal;
-        max-width: none;
-        line-height: 24px;
-        padding-bottom: 0;
-      }
-    }
-    &-tags .list {
-      margin: 0;
     }
   }
 }
